@@ -348,7 +348,8 @@
                                 {% if option.selected_value == value %}checked{% endif %}
                           >
                           <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-                            {{ value }}
+                            {{ value }} / {{ product.variants[forloop.index0].inventory_quantity }}
+                            {% comment %} test {% endcomment %}
                           </label>
                         {%- endfor -%}
                       </fieldset>
